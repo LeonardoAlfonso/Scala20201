@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/run/media/leonardo/Informacion/Clases 2020/Objetos/Códigos/maquinacomidarapida/src/main/scala/Alimentos/TipoTamano.scala:19:31: not found: value Random[0m
+[0m[[0m[31merror[0m] [0m[0m        var codigo : String = Random.alphanumeric.take(6).mkString("")[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
