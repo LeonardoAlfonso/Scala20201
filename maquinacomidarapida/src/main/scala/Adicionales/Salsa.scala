@@ -1,0 +1,6 @@
+package Adicionales
+
+class Salsa
+{
+    
+}
