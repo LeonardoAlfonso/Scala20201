@@ -1,11 +1,11 @@
 package Alimentos
 
-import scala.util.Random
+import Servicios.GeneradorReferencia
 
 class TipoTamano
 {
     /*Atributos*/
-    var _idTipoTamano : String = this.generarId()
+    var _idTipoTamano : String = GeneradorReferencia.crearReferencia()
     var _descripcion : String = _
 
     /*Getters*/
@@ -16,9 +16,4 @@ class TipoTamano
     def descripcion_= (nuevaDescripcion : String) = _descripcion = nuevaDescripcion
 
     /*Métodos*/
-    private def generarId() : String = 
-    {
-        var codigo : String = Random.alphanumeric.take(6).mkString("")
-        return codigo
-    }
 }

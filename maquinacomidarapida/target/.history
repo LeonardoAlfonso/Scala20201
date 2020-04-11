@@ -1,3 +1,7 @@
 compile
 test
 git init
+compile
+testOnly HamburguesaTest
+test
+testOnly HamburguesaTest
