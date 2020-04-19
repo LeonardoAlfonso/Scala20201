@@ -12,3 +12,9 @@ testOnly CajaTest
 }
 testOnly CajaTes
 testOnly CajaTest
+compile
+run
+compile
+run
+compile
+run
