@@ -3,7 +3,7 @@ package InsumosPlasticos
 trait InsumoCocina
 {
     /*Atributos*/
-    var _costo : Double
+    protected var _costo : Double
 
     /*Métodos*/
     def calcularCosto() : Double

@@ -5,3 +5,4 @@ compile
 testOnly HamburguesaTest
 test
 testOnly HamburguesaTest
+testOnly CajaTest

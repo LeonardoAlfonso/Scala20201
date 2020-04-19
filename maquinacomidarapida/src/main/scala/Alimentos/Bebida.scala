@@ -29,6 +29,6 @@ class Bebida extends Alimento
     /*Métodos*/
     def calcularCosto() : Double = 
     {
- 
+        return _costo
     }
 }

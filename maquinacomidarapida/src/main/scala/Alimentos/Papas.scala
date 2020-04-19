@@ -30,6 +30,10 @@ class Papas extends Alimento
     /*Métodos*/
     def calcularCosto() : Double = 
     {
-   
+        if(_conQueso)
+        {
+            _costo = _costo + (_costo * 0.12)
+        }
+        return _costo   
     }
 }

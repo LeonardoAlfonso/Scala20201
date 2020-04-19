@@ -1,0 +1,7 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCajaTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFeature: Crear Hamburguesa[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Scenario: Hamburguesa Ranchera con valor de $20000 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  1 was not less than 0 (CajaTest.scala:28)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Given Dada una hamburguesa ranchera con valor de $20000 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    When Se agrega la hamburguesa [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Then El catálogo no se encuentra vacío [0m[0m
