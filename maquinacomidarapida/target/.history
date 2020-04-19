@@ -6,3 +6,9 @@ testOnly HamburguesaTest
 test
 testOnly HamburguesaTest
 testOnly CajaTest
+clc
+testOnly CajaTest
+}}}
+}
+testOnly CajaTes
+testOnly CajaTest

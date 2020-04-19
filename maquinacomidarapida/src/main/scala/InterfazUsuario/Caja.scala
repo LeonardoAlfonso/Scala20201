@@ -40,6 +40,7 @@ class Caja
         {
             costoTotal += p.calcularCosto()
         }}
+        _pedido = List()
         return costoTotal
     }
 
