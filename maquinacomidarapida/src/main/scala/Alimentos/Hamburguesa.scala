@@ -8,8 +8,8 @@ class Hamburguesa extends Alimento
     override var _tamano : TipoTamano = _
     override var _descripcion : String = _
     override var _referencia : String = GeneradorReferencia.crearReferencia()
-    override var _costo : Double = _
     private var _esAgrandable : Boolean = false
+    override var _costo : Double = _
 
     /*Cosntructores Auxiliares*/
     def this(t: TipoTamano, d : String, c : Double)

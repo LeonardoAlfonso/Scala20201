@@ -17,5 +17,5 @@ abstract class Alimento extends InsumoCocina
     /*Setters*/
     def tamano_= (nuevoTamano : TipoTamano) = _tamano = nuevoTamano
     def descripcion_= (nuevaDescripcion : String) = _descripcion = nuevaDescripcion
-    def referencia_= (nuevaReferencia : String) = _referencia = nuevaReferencia
+    def referencia_= (nuevaReferencia : String) = _referencia = nuevaReferencia    
 }

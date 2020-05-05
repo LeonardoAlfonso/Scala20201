@@ -3,6 +3,7 @@ package InterfazUsuario
 import scala.io._
 import Alimentos._
 import InsumosPlasticos._
+import scala.util._
 
 object InterfazUsuario extends App
 {
@@ -20,29 +21,41 @@ object InterfazUsuario extends App
         var opcion : Int = StdIn.readInt()
         if (opcion == 1)
         {
-            crearAlimentoCatalogo()         
+            var resultadoOperacion = crearAlimentoCatalogo()
+            resultadoOperacion match
+            {
+                case Success(s) => println("Producto Creado Correctamente")
+                case Failure(f) => println(f)
+            }    
         }
         caja.mostrarCatalogo().foreach(p => println(p.descripcion + " " + p.referencia))
     }
 
-    def crearAlimentoCatalogo() : Unit = 
+    def crearAlimentoCatalogo() : Try[Unit] = 
     {
-        println("Qué alimento desea crear? \n 1->Hamburguesa \n 2->Bebida 3->Papas")
-        var opcionComida : Int = StdIn.readInt()
-
-        if (opcionComida == 1)
-        {
-            println("Coloque el nombre de su hamburguesa")
+        return Try{
+            println("Qué alimento desea crear? Hamburguesa, Bebida o Papas");
+            var opcionComida : String = StdIn.readLine()
+            var claseComida = Class.forName("Alimentos." + opcionComida)
+            var instanciaComida = claseComida.newInstance();
+            var comida = instanciaComida.asInstanceOf[Alimento]
+            println("Coloque el nombre de su " + opcionComida)
             var nombre : String = StdIn.readLine()
-            println("Coloque el precio de su hamburguesa")
+            println("Coloque el precio de su " + opcionComida)
             var precio : Double = StdIn.readDouble()
-            var tipoTamano = elegirTamano()
-            var hamburguesa : Hamburguesa = new Hamburguesa(tipoTamano, nombre, precio)
-            caja.agregarAlimentoCatalogo(hamburguesa)
+            comida.descripcion = nombre
+            comida.setCosto(precio)
+            var tipoTamano : Option[TipoTamano] = elegirTamano()
+            if (tipoTamano.isEmpty)
+            {
+                throw new Exception("Lista de tamaños Vacía")
+            }
+            comida.tamano = tipoTamano.get
+            caja.agregarAlimentoCatalogo(comida)
         }
     }
 
-    def elegirTamano() : TipoTamano = 
+    def elegirTamano() : Option[TipoTamano] = 
     {
         var tamanos : List[TipoTamano] = caja.mostrarTamanos()
         println("Tamaños actuales: ")
@@ -52,7 +65,7 @@ object InterfazUsuario extends App
         }}
         println("Escriba la referecia de su tamaño: ")
         var referencia : String = StdIn.readLine()
-        var tipoTamanoElejido : TipoTamano = tamanos.filter(t => t.idTipoTamano == referencia).head
+        var tipoTamanoElejido : Option[TipoTamano] = tamanos.filter(t => t.idTipoTamano == referencia).headOption
         return tipoTamanoElejido
     }
 

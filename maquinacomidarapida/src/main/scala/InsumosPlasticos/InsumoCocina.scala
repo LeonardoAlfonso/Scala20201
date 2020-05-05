@@ -6,5 +6,6 @@ trait InsumoCocina
     protected var _costo : Double
 
     /*Métodos*/
+    def setCosto(nuevoCosto : Double) = _costo = nuevoCosto
     def calcularCosto() : Double
 }
