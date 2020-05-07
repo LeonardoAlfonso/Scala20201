@@ -6,7 +6,7 @@ class ManejoListas
 {
     def entregarResultado(indice : Int, lista : List[Int]) : Try[Int] =
     {
-        var valor : Try[Int] = Try(lista(indice))
+        var valor : Try[Int] = Try(lista(indice))   //Success - Failure
         return valor
     }
 
@@ -16,6 +16,7 @@ class ManejoListas
         // println(primerValor)
         return primerValor
     }
+
 
     def agregarElemento(valor : Option[Int], lista : List[Int]) : Option[List[Int]] = 
     {

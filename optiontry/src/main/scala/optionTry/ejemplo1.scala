@@ -7,7 +7,7 @@ object ejemplo1 extends App
 {
     /*Variables*/
     var gestorListas : ManejoListas = new ManejoListas
-    var listaNumeros : List[Int] = List(1,2,5,7,1,7,5)
+    var listaNumeros : List[Int] = List(1,2,3,4,5,8)
     var listaPrecios : List[String] = List("20000", "8000", "5000")
 
     /*Ejemplo 1*/
@@ -15,64 +15,65 @@ object ejemplo1 extends App
     
 
     /*Ejemplo 2*/
-    // ejemploOption1()
+    ejemploOption1()
 
     /*Ejemplo 3*/
     // ejemploOption2()
 
     /*Ejemplo 4*/
-    ejemploTry2()
+    //ejemploTry2()
 
     def ejemploTry1()
     {
+        // gestorListas.entregarResultado(1, listaNumeros)
         var valor : Try[Int] = gestorListas.entregarResultado(1, listaNumeros)
-        if (valor.isSuccess)
-        {
-            println(valor)
-            println(valor.get)  
-        }
-        else
-        {
-            println("El índice no existe en la lista")
-            println(valor)
-        }
+        // if (valor.isSuccess)
+        // {
+        //     println(valor)
+        //     println(valor.get)  
+        // }
+        // else
+        // {
+        //     println("El índice no existe en la lista")
+        //     println(valor)
+        // }
 
-        valor match
-        {
-            case Success(v) => println("El resultado es " + v)
-            case Failure(f) => println("Falló por " + f)
-        }
+        // valor match
+        // {
+        //     case Success(v) => println("El resultado es " + v)
+        //     case Failure(f) => println("Falló por " + f)
+        // }
     }
     
     def ejemploOption1()
     {
         var valor2 : Option[Int] = gestorListas.buscarEnLista(7, listaNumeros)
-        gestorListas.buscarEnLista(7, listaNumeros)
+        // gestorListas.buscarEnLista(7, listaNumeros)
         
-        if (valor2.isEmpty)
-        {
-            println("No existe el elemento en la lista")
-        }
-        else
-        {
-            println("El valor es " + valor2.get)
-        }
+        // if (valor2.isEmpty)  //valor2 == None
+        // {
+        //     println("No existe el elemento en la lista")
+        // }
+        // else //valor2 == Some(7)
+        // {
+        //     println("El valor es " + valor2.get)
+        // }
 
         valor2 match
         {
-            case Some(s) => println("El valor es " + s)
-            case None => println("No existe el elemento en la lista")
+            case Some(s) => println("El valor es " + s + " estoy en el match")
+            case None => println("No existe el elemento en la lista del match")
         }
     }
 
     def ejemploOption2()
     {
-        var valorEnLista : Option[Int] = gestorListas.buscarEnLista(7, listaNumeros)
-        var nuevaLista : Option[List[Int]] = gestorListas.agregarElemento(valorEnLista, listaNumeros)
-        if (!nuevaLista.isEmpty)
-        {
-            nuevaLista.get.foreach(n => println(n))
-        }      
+        // var valorEnLista : Option[Int] = gestorListas.buscarEnLista(7, listaNumeros)
+        // var nuevaLista : Option[List[Int]] = gestorListas.agregarElemento(valorEnLista, listaNumeros)
+        // if (!nuevaLista.isEmpty)
+        // {
+        //     nuevaLista.get.foreach(n => println(n))
+        // }      
     }
 
     def ejemploTry2()
