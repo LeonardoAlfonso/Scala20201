@@ -1,0 +1,16 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Strategy.TestStrategy, org.scalatest.tools.Framework$$anon$1@1f60d71d, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(singleton.TestSingleton, org.scalatest.tools.Framework$$anon$1@1f60d71d, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Observer.TestObserver, org.scalatest.tools.Framework$$anon$1@1f60d71d, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Builder.TestBuilder, org.scalatest.tools.Framework$$anon$1@1f60d71d, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 476 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 3, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 3 TESTS FAILED ***[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Observer.TestObserver[0m
+[0m[[0m[0mdebug[0m] [0m[0m	singleton.TestSingleton[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	Builder.TestBuilder[0m
+[0m[[0m[31merror[0m] [0m[0m	Strategy.TestStrategy[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

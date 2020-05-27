@@ -1,0 +1,6 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestObserver:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFeature: Probar Evento de Alarma[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  Scenario: Se dispara una alarma[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    Given Dado un gestor de alarmas [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    When Se le agregan diferentes alarmas [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    Then Se envía un evento [0m[0m
